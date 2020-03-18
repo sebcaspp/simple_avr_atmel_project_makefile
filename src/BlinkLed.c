@@ -3,7 +3,7 @@
 #endif
 
 #ifndef F_CPU
-#define F_CPU 16000000UL // or whatever may be your frequency
+#define F_CPU 1000000UL // or whatever may be your frequency
 #endif
 
  
@@ -12,7 +12,8 @@
  
 int main(void)
 {
-    DDRC = 0x01;                       // initialize port C
+//    DDRC = 0x01;                       // initialize port CDDRB |= (1 << PB0);
+    DDRC |= (1 << PC0);
     while(1)
     {
         // LED on

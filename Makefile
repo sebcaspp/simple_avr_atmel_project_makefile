@@ -1,7 +1,7 @@
 
-MCU   := atmega32
+MCU   := atmega328p
 GCC   := avr-gcc
-FLAGS := -g -mmcu=$(MCU)
+FLAGS := -g -Os -mmcu=$(MCU)
 
 AVR_LIB_PATH     := /usr/lib
 AVR_INCLUDE_PATH := $(AVR_LIB_PATH)/avr/include
